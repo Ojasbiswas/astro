@@ -447,6 +447,7 @@
 "Assets/Script/Grid/GridManager.cs"
 "Assets/Script/Grid/Tile.cs"
 "Assets/Script/Inventory.cs"
+"Assets/Script/InventorySlot.cs"
 "Assets/Script/Player/Player Controls.cs"
 "Assets/Script/Player/PlayerController.cs"
 "Assets/Script/Player/Sword.cs"
