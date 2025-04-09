@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlight: {fileID: 4062310839901411226}
+  inventoryManager: {fileID: 2083843071873845867, guid: a0237c9b6f2f05e41a70ec625322521e, type: 3}
 --- !u!61 &8763358615600051425
 BoxCollider2D:
   m_ObjectHideFlags: 0

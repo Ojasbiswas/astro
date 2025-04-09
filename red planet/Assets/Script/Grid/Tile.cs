@@ -6,18 +6,32 @@ public class Tile : MonoBehaviour
 
     private bool isClickable;
 
+    [SerializeField] private GameObject inventoryManager;
+    private Inventory inventory;
+
+    private void Start()
+    {
+        inventoryManager = GameObject.FindGameObjectWithTag("Inventory Manager");
+        inventory = inventoryManager.GetComponent<Inventory>();
+    }
 
 
     private void OnMouseEnter()
     {
-        highlight.SetActive(true);
-        isClickable = true;
+        if (inventory.isInvetoryOpened)
+        {
+            highlight.SetActive(true);
+            isClickable = true;
+        }
     }
 
     private void OnMouseExit()
     {
-        highlight.SetActive(false);
-        isClickable = false;
+        if (inventory.isInvetoryOpened)
+        {
+            highlight.SetActive(false);
+            isClickable = false;
+        }
     }
 
     private void Update()
@@ -26,6 +40,12 @@ public class Tile : MonoBehaviour
         {
             Debug.Log(gameObject.transform.position);
             Debug.Log(gameObject.name);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            highlight.SetActive(false);
+            isClickable = false;
         }
     }
 }
